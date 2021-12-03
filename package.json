@@ -1,8 +1,8 @@
 {
   "name": "card-corner-tag-models",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "Studes corner tag implementations",
+  "keywords": ["react", "chakra-ui", "corner-tag"],
   "main": "src/index.js",
   "dependencies": {
     "@chakra-ui/react": "1.1.5",
