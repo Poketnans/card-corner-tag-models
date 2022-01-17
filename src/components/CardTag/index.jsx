@@ -3,12 +3,16 @@ import { useState } from "react";
 
 const color = { normal: "#505960cc", hover: "#41484e" };
 
-const CardTag = () => {
+const CardTag = ({
+  title = "Card Title",
+  subtitule = "card subtitle",
+  ref = "https://html5zombo.com/"
+}) => {
   const [bgColor, setBgColor] = useState(color.normal);
 
   return (
     <Link
-      href="https://html5zombo.com/"
+      href={ref}
       target="_blank"
       w="120px"
       h="120px"
@@ -65,10 +69,8 @@ const CardTag = () => {
         pointerEvents="auto"
         transform="rotate(45deg)"
       >
-        <Box fontSize="8px" textTransform="uppercase">
-          card subtitle
-        </Box>
-        <Box fontSize="16px">Card Title</Box>
+        <Box fontSize="8px" textTransform="uppercase" children={subtitule} />
+        <Box fontSize="16px" children={title} />
       </Box>
     </Link>
   );
