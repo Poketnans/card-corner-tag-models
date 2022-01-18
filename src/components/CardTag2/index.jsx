@@ -1,4 +1,4 @@
-import { border, Box, Link } from "@chakra-ui/react";
+import { Link } from "@chakra-ui/react";
 import { useState } from "react";
 
 const color = { normal: "#0282a2cc", hover: "#0282a2" };

@@ -1,13 +1,5 @@
-import React, { useEffect, useState } from "react";
-import {
-  Box,
-  Button,
-  Flex,
-  Image,
-  Skeleton,
-  Text,
-  VStack
-} from "@chakra-ui/react";
+import React, { useState } from "react";
+import { Button, Image, Skeleton, Text, VStack } from "@chakra-ui/react";
 import CardTag from "../CardTag";
 import CardTag2 from "../CardTag2";
 
@@ -17,7 +9,7 @@ const Card = ({ variant }) => {
   return (
     <VStack
       m="50px auto"
-      w="50%"
+      w="290px"
       border="solid 1px"
       borderRadius="10px"
       paddingBottom="3"
@@ -35,7 +27,11 @@ const Card = ({ variant }) => {
         <Image
           onLoad={() => setIsLoading(false)}
           display={isLoading ? "none" : "unset"}
-          src="https://c.wallhere.com/photos/bf/94/Pok_mon_video_games_pixel_art_pixels-1361959.jpg!d"
+          src={
+            variant
+              ? "https://pixeljoint.com/files/icons/full/wayuki_warrior_of_light.gif"
+              : "https://c.wallhere.com/photos/bf/94/Pok_mon_video_games_pixel_art_pixels-1361959.jpg!d"
+          }
           alt="pixel"
           // marginTop="0 !important"
           // borderRadius="10px 10px 0 0"
@@ -43,10 +39,7 @@ const Card = ({ variant }) => {
       </Skeleton>
       <Text textAlign="justify" p="5">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Curabitur vitae nunc
-        sed velit dignissim sodales ut. Tristique senectus et netus et malesuada
-        fames ac turpis. Egestas maecenas pharetra convallis posuere morbi leo
-        urna. Lacus vestibulum sed arcu non odio euismod lacinia.
+        tempor incididunt ut labore et dolore magna aliqua.
       </Text>
       <Button colorScheme="red"> button </Button>
     </VStack>
