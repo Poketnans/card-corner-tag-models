@@ -9,8 +9,9 @@ import {
   VStack
 } from "@chakra-ui/react";
 import CardTag from "../CardTag";
+import CardTag2 from "../CardTag2";
 
-const Card = () => {
+const Card = ({ variant }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
@@ -19,11 +20,10 @@ const Card = () => {
       w="50%"
       border="solid 1px"
       borderRadius="10px"
-      // overflow="hidden"
       paddingBottom="3"
       position="relative"
     >
-      <CardTag />
+      {variant ? <CardTag2 /> : <CardTag />}
       <Skeleton
         isLoaded={!isLoading}
         h="fit-content"
